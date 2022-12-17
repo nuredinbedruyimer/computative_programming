@@ -5,7 +5,6 @@ class Solution:
             collector.extend(matrix[i])
         print(collector)
         collector.sort()
-        print(collector)
         return collector[(k-1)]
             
         
