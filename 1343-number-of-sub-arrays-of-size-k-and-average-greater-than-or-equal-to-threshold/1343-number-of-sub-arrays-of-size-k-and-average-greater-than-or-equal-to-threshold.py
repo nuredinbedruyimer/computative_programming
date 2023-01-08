@@ -8,8 +8,8 @@ class Solution:
         if(testerSum<=sum):
             counter+=1
         for j in range(k,len(arr)):
-            sum+=arr[j]
             sum-=arr[j-k]
+            sum+=arr[j]
             if(testerSum<=sum):
                 counter+=1
         return counter
