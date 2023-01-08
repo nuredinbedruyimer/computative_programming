@@ -5,7 +5,7 @@ class Solution:
         firstCounter=0
         secondCounter=0
         maxCounter=0
-        for i in range(len(nums)-1):
+        for i in range(len(nums)):
             if nums[i]==1:
                 firstCounter+=1
             else:
