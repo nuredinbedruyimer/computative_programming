@@ -13,8 +13,6 @@ class Solution:
             if listOnePointer.val<listTwoPointer.val:
                 sortingPointer.next=listOnePointer
                 listOnePointer=listOnePointer.next
-              
-               
             else:
                 sortingPointer.next=listTwoPointer
                 listTwoPointer=listTwoPointer.next
