@@ -7,7 +7,7 @@ class Solution:
         secondCounter=0
         maxCounter=0
         # nums with atleast one zero
-        for left in range(len(nums)):
+        for left in range(len(nums)-1):
             if nums[left]==1:
                 firstCounter+=1
             else:
