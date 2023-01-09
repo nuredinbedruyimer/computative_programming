@@ -1,17 +1,17 @@
 class Solution:
     def numOfSubarrays(self, arr: List[int], k: int, threshold: int) -> int:
         sum=0
-        counter=0
-        for i  in range(k):
-            sum+=arr[i]
+        subArrayCounter=0
+        for left  in range(k):
+            sum+=arr[left]
         testerSum=k*threshold
         if(testerSum<=sum):
-            counter+=1
-        for j in range(k,len(arr)):
-            sum-=arr[j-k]
-            sum+=arr[j]
+            subArrayCounter+=1
+        for right in range(k,len(arr)):
+            sum-=arr[right-k]
+            sum+=arr[right]
             if(testerSum<=sum):
-                counter+=1
-        return counter
+                subArrayCounter+=1
+        return subArrayCounter
         
         
