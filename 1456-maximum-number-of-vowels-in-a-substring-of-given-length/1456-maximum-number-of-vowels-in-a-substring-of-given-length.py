@@ -6,10 +6,7 @@ class Solution:
         for left in range(k):
             if s[left] in vowels:
                 counter+=1
-       
         maxCounter=counter
-        print(left)
-        
         for right in range(k,len(s)):
             if(s[left-k+1]) in vowels:
                 counter=counter-1
