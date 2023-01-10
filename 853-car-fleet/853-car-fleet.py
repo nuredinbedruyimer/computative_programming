@@ -3,7 +3,7 @@ class Solution:
         pairOfSpeedAndPosition=[[pos,spe] for pos,spe in  zip(position,speed)]
         print( pairOfSpeedAndPosition)
         stack=[]
-        print(sorted(pairOfSpeedAndPosition[::-1]))
+        print(sorted(pairOfSpeedAndPosition)[::-1])
         for pos,spe in  sorted(pairOfSpeedAndPosition)[::-1]:
             stack.append((target-pos)/spe)
             while len(stack)>=2 and stack[-1]<=stack[-2]:
