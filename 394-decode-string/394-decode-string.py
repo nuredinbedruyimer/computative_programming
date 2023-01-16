@@ -16,6 +16,7 @@ class Solution:
                 resultStack.append(int(number)*substr)
         print(resultStack)
         result ="".join(resultStack)
+        print(result)
         return result
                 
                     
