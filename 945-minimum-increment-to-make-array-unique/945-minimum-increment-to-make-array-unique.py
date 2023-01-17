@@ -1,6 +1,6 @@
 class Solution:
     def minIncrementForUnique(self, nums: List[int]) -> int:
-        # solution one
+        
         nums.sort()
         ans,preValue=0,nums[0]
         length=len(nums)
@@ -11,5 +11,6 @@ class Solution:
                 currentValue=preValue+1
             preValue=currentValue
         return ans
-
+       
+        
         
