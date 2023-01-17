@@ -1,6 +1,6 @@
 class Solution:
     def findKthBit(self, n: int, k: int) -> str:
-        def g(s):
+        def getReverse(s):
             ans=[]
             for i in s:
                 if i=="0":
@@ -10,6 +10,6 @@ class Solution:
             return "".join(reversed(ans))
         s="0"
         for i  in range(n):
-            s=s+"1"+g(s)
+            s=s+"1"+getReverse(s)
         return s[k-1]
         
