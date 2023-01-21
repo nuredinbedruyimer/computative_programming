@@ -25,7 +25,7 @@ class Solution:
             carry=(carry+l2.val)//10
             current_node=current_node.next
         if carry>0:
-            current_node.next=ListNode(val=1)
+            current_node.next=ListNode(val=carry)
             
         return (adder)
             
