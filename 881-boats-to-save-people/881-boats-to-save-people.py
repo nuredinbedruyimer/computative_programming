@@ -5,7 +5,7 @@ class Solution:
         left,right=0,len(people)-1
         while(left<=right):
             remainSpace=limit-people[right]
-            right-=1
+            right=right-1
             numberOfBoat+=1
             
             if left<=right and remainSpace>=people[left]:
