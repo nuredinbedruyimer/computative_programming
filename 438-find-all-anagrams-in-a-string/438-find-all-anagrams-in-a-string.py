@@ -12,12 +12,15 @@ class Solution:
             sCounter[s[right]]=1+sCounter.get(s[right],0)
             sCounter[s[left]]-=1
             
+            
             if sCounter[s[left]]==0:
                 sCounter.pop(s[left])
             left=left+1
             
+            
             if sCounter==pCounter:
                 result.append(left)
+            
             
 
             
