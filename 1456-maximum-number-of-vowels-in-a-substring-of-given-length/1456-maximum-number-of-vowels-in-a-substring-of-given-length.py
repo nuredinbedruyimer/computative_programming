@@ -3,10 +3,13 @@ class Solution:
         vowels={'a','e','i','o','u'}
         counter=0
         maxCounter=0
+        # left side of sliding window
         for left in range(k):
             if s[left] in vowels:
                 counter+=1
         maxCounter=counter
+        print(left)
+        # right side of sliding window 
         for right in range(k,len(s)):
             if(s[left-k+1]) in vowels:
                 counter=counter-1
