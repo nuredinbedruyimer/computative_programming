@@ -8,7 +8,9 @@ class Solution:
             stack.append((target-pos)/spe)
             while len(stack)>=2 and stack[-1]<=stack[-2]:
                 stack.pop()
+        print(stack)
         return len(stack)
+   
         
         
         
