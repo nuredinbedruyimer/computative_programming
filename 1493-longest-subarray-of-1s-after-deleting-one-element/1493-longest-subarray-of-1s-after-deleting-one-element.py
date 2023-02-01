@@ -3,11 +3,12 @@ class Solution:
         # for case of all one's
         if len(nums)==nums.count(1):
             return len(nums)-1
+       
         firstCounter=0
         secondCounter=0
         maxCounter=0
         # nums with atleast one zero
-        for left in range(len(nums)-1):
+        for left in range(len(nums)):
             if nums[left]==1:
                 firstCounter+=1
             else:
