@@ -7,16 +7,19 @@ class Solution:
         firstCounter=0
         secondCounter=0
         maxCounter=0
+        stack=[]
         # nums with atleast one zero
         for left in range(len(nums)):
             if nums[left]==1:
                 firstCounter+=1
+                
             else:
                 for right in range(left+1,len(nums)):
                     if nums[right]==0:
                         break
                     else:
                         secondCounter+=1
+                       
                 if maxCounter<(firstCounter+secondCounter):
                     maxCounter=firstCounter+secondCounter
                 firstCounter=0
