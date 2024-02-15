@@ -4,8 +4,9 @@ class Solution:
             for index,value in enumerate(nums):
                 nums[index]=str(value)
             
-            def compare_digit(num1,num2):
-                if num1+num2>num2+num1:
+            def compare_digit(num_one,num_two):
+                # comparing  34 and othe like 31  3+4>3+1
+                if num_one+num_two>num_two+num_one:
                     return -1
                 else:
                     return 1
