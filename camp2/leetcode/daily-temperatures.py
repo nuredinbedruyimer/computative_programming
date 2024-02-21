@@ -12,6 +12,7 @@ class Solution:
 
 
                 stack.append(i)
+                
             return ans
         return get_answer()
         
