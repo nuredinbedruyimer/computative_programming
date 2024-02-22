@@ -13,7 +13,7 @@ class Solution:
         if n is odd no need to swap the last row then using unmeeted pointer
         
         """
-        def reverse(N):
+        def swap(N):
             left = 0
             right = N-1
             while left<right:
@@ -25,7 +25,7 @@ class Solution:
             N = len(matrix)
             M = len(matrix[0])
             # reverse the matrix in row
-            reverse(N)
+            swap(N)
            
             for row in range(N):
                 for column in range(row):
