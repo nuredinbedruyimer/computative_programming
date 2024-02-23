@@ -27,6 +27,7 @@ class Solution(object):
                     left = mid - stack[-1]
                     right = i - mid
                     min_total += left * right * arr[mid]
+                    print(min_total)
 
                 stack.append(i)
 
