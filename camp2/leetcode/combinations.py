@@ -15,14 +15,22 @@ class Solution(object):
            
         # combinations(1,k,s)
         # return ans
+        """
+        
+        
+        """
         ans=[]
         stack=[]
         def combinations(start,k,stack):
+        
+            
+
             if  len(stack)==k:
                 ans.append(stack[:])
                 return 
             if start > n:
                 return 
+            
             stack.append(start)
             combinations(start+1,k,stack)
             stack.pop()
