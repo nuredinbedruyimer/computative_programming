@@ -27,5 +27,16 @@ def build_tree(arr):
 #         self.right = right
 class Solution:
     def constructMaximumBinaryTree(self, nums: List[int]) -> Optional[TreeNode]:
+
+
         return build_tree(nums)
+
+
+
+        """
+        Time complexity -- > O(N*N)
+        space complixity ===> O(N) from the stack
+        
+        
+        """
         
