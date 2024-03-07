@@ -1,5 +1,9 @@
+from  bisect  import bisect_left , bisect_right
+
+
 class Solution:
     def findRadius(self, houses: List[int], heaters: List[int]) -> int:
+
         """
                L
         [1, 2, 3, 4, 8, 29]
@@ -11,28 +15,50 @@ class Solution:
         
         """
         
-        heaters = [-10**9] + heaters + [2*10**9+7]
         
+
         ans = 0
 
-        houses.sort()
+        
+
 
         # handle edge case by adding extrame vlue on the both end of heater
         heaters.sort()
+
+        N = len(heaters)
 
         start = 1
 
         for house in houses:
 
-            while heaters[start]<house:
+            #  finding heater value that have larger value but the smallest one
+            #  to do that we use bisect_left in order to find the smallest greater
+            #  element
 
-                start+=1
+            # should less than the length of arr
+            heater_index = bisect_left(heaters , house)
 
-            temp = min(house-heaters[start - 1], heaters[start] - house) 
+            
+            min_radius = float('inf')
 
-            ans = max(ans, temp)
+            if heater_index < N:
+                
+                min_radius = min(min_radius , abs(house - heaters[heater_index]))
+            
+
+            if heater_index > 0:
+                min_radius = min(min_radius , abs(heaters[heater_index - 1 ] - house))
+
+            ans = max(min_radius, ans)
+
+
+            
+
+            
+
+            
 
         return  ans
 
 
-        
+         
