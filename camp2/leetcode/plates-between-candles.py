@@ -53,7 +53,7 @@ def get_plates(s):
 
 class Solution:
     def platesBetweenCandles(self, s: str, queries: List[List[int]]) -> List[int]:
-        candle_position = [i for i, v in enumerate(s) if v == '|']
+        candle_position = get_plates(s)
 
         ans = []
         for left,  right in queries:
