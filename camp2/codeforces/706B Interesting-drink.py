@@ -9,10 +9,8 @@ def get_left(arr, target):
         middle = low + (high - low) // 2
 
         if arr[middle] > target:
-            
             high = middle
         else:
-            
             low = middle
     
     return low
